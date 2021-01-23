@@ -1,13 +1,17 @@
 
 # DNS Server mit Host auf Docker
 
-Dieses Projekt stellt in DNS Server mit zwei Host zur Verfügung. Auf den Hosts können Abfragen an den DNS Server gestellt werden.
+Dieses Projekt stellt ein DNS Server mit zwei Host zur Verfügung. Auf den Hosts können Abfragen an den DNS Server gestellt werden.
 
 > Wichtig: Das Projekt ist möglicherweise nicht vollständig Dokumentiert
+
+Inspiriert durch @foo0x29a
 
 ## Docker Image & Netzwerk
 
 Zur Vorbereitung wird das Image *dns_teko_image* ab dem Dockerfile erstellt. Diese beinhaltet den DNS Deamon *bind9* und *dnsutils* um DNS Abfragen zu erstellen. Weiter benötigen wir ein Netzwerk *teko-net* in welchem die Infrasturkur operiert.
+
+Infrasturkutr:
 
     host-1 --> DNS-Server <-- host-2
 
