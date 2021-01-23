@@ -1,0 +1,9 @@
+zone "nagoya-foundation.com" {
+    type master;
+    file "/etc/bind/zones/db.nagoya-foundation.com";
+};
+
+zone "dns-teko.lu" {
+    type master;
+    file "/etc/bind/zones/db.dns-teko.lu";
+};

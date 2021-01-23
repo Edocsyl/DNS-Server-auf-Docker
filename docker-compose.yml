@@ -1,0 +1,36 @@
+version: '3'
+services:
+  dns-server:
+    build:
+      dockerfile: dockerfile
+      args:
+        TYPE: SRV
+    environment:
+    ports:
+    volumes:
+    command: 
+    networks:
+      teko-net:
+        ipv4_address: 172.20.0.2
+  dns-host1:
+    build:
+      dockerfile: dockerfile
+      args:
+        TYPE: HOST
+    networks:
+      teko-net:
+        ipv4_address: 172.20.0.3
+  dns-host2:
+    build:
+      dockerfile: dockerfile
+      args:
+        TYPE: HOST
+    networks:
+      teko-net:
+        ipv4_address: 172.20.0.4
+networks:
+  teko-net:
+    # Use a custom driver
+    driver: bridge
+    config:
+      - subnet:  172.20.0.0/24
