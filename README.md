@@ -17,37 +17,37 @@ Infrasturkutr:
 
 ### Docker Image "dns_teko_image" ab Dockerfile erstellen
 
-> docker build -t dns_teko_image .
+    > docker build -t dns_teko_image .
 
 ### Netzwerk Erstellen
 
-> docker network create teko-net --subnet 172.20.0.0/24
+    > docker network create teko-net --subnet 172.20.0.0/24
 
 ### Zusätzliche Commands
 
 #### Netzwerk löschen
 
-> docker network remove teko-net
+    > docker network remove teko-net
 
 #### Netzwerke auflisten
 
-> docker network list
+    > docker network list
 
 ## Container
 
 ### DNS-Server
 
-> docker run -d --rm --name=dns-server --net=teko-net --ip=172.20.0.2 --dns=172.20.0.2 -e "type=dns" dns_teko_image
+    > docker run -d --rm --name=dns-server --net=teko-net --ip=172.20.0.2 --dns=172.20.0.2 -e "type=dns" dns_teko_image
 
 ### Run DNS Server
 
-> docker exec -d dns-server /etc/init.d/bind9 start
+    > docker exec -d dns-server /etc/init.d/bind9 start
 
 ### Zusätzliche Commands
 
 #### Stop DNS Server
 
-> docker exec -d dns-server /etc/init.d/bind9 stop
+    > docker exec -d dns-server /etc/init.d/bind9 stop
 
 #### Container auflisten
 
@@ -55,8 +55,8 @@ docker container list
 
 ## Hosts 1&2
 
-> docker run -d --rm --name=host-1 --net=teko-net --ip=172.20.0.3 --dns=172.20.0.2 dns_teko_image
+    > docker run -d --rm --name=host-1 --net=teko-net --ip=172.20.0.3 --dns=172.20.0.2 dns_teko_image
 
-> docker run -d --rm --name=host-2 --net=teko-net --ip=172.20.0.4 --dns=172.20.0.2 dns_teko_image
+    > docker run -d --rm --name=host-2 --net=teko-net --ip=172.20.0.4 --dns=172.20.0.2 dns_teko_image
 
 ## Testing
