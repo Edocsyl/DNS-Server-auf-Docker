@@ -46,8 +46,12 @@ Zur Vorbereitung wird das Image *dns_teko_image* ab dem Dockerfile erstellt. Die
 ## Container
 
 ### DNS-Server
+Mit diesem Command wird ein Containter *dns-server* erstellt.
 
-    > docker run -d --rm --name=dns-server --net=teko-net --ip=172.20.0.2 --dns=172.20.0.2 -e "type=dns" dns_teko_image
+    > docker run -d --rm --name=dns-server \
+    --net=teko-net --ip=172.20.0.2 --dns=172.20.0.2 \
+    -e "type=dns" \
+    dns_teko_image
 
 ### Run DNS Server
 
@@ -66,7 +70,11 @@ Zur Vorbereitung wird das Image *dns_teko_image* ab dem Dockerfile erstellt. Die
 ## Hosts 1&2
 
 ### Host 1 erstellen
-    > docker run -d --rm --name=host-1 --net=teko-net --ip=172.20.0.3 --dns=172.20.0.2 dns_teko_image
+    > docker run -d --rm --name=host-1 \
+    --net=teko-net --ip=172.20.0.3 --dns=172.20.0.2 \
+    dns_teko_image
 
 ### Host 2 erstellen
-    > docker run -d --rm --name=host-2 --net=teko-net --ip=172.20.0.4 --dns=172.20.0.2 dns_teko_image
+    > docker run -d --rm --name=host-2 \
+    --net=teko-net --ip=172.20.0.4 --dns=172.20.0.2 \
+    dns_teko_image
