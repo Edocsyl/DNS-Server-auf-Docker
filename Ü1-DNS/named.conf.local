@@ -3,7 +3,7 @@ zone "nagoya-foundation.com" {
     file "/etc/bind/zones/db.nagoya-foundation.com";
 };
 
-zone "dns-teko.lu" {
+zone "teko.local" {
     type master;
-    file "/etc/bind/zones/db.dns-teko.lu";
+    file "/etc/bind/zones/db.teko.local";
 };

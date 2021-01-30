@@ -1,5 +1,5 @@
 
-# Testumgebung: DNS Server & Host's auf Docker
+# Übung 1 - Testumgebung: DNS Server & Host's auf Docker
 
 Dieses Projekt stellt ein DNS Server mit zwei Host zur Verfügung. Auf den Hosts können Abfragen an den DNS Server gestellt werden.
 
