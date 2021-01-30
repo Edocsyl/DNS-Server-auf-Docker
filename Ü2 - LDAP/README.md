@@ -4,13 +4,12 @@
 ## *openldap* Installation & Konfiguration
 Um die 
 
+### Volumes erstellen
     > docker volume create ldap_database
     > docker volume create ldap_config
 
-### Volumes erstellen
 
-
-### Docker Container erstellen
+### openldap Container erstellen
 
     > docker run -p 389:389 --name ldap-service \
     --hostname ldap-service \
@@ -23,7 +22,7 @@ Um die
     --detach osixia/openldap:1.4.0
 
 
-### *phpLDAPadmin* Installation
+### *phpLDAPadmin* Contianer erstellen
 asdasd
 
     > docker run -p 6443:443 --name phpldapadmin-service \
@@ -33,3 +32,10 @@ asdasd
     --detach osixia/phpldapadmin:0.9.0
 
 
+    --env PHPLDAPADMIN_HTTPS=false \
+
+
+
+
+Username (DN): cn=admin,dc=teko,dc=local
+Password: adminPassword
