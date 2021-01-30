@@ -1,6 +1,14 @@
 # Übung 2 - OpenLDAP 
 In dieser Übung wird ein OpenLDAP Container *ldap-service* erstellt. Mit dem weitern Container *phpldapadmin-service* kann per Webinterface *phpldapadmin* auf den LDAP Server zugegriffen werden. 
 
+Infrasturkutr (Docker Container):
+  ```
+ +-------------------+              +---------------------------+
+ | OpenLDAP (Server) |              | phpLDAPadmin (Web Client) |
+ | ldap-service      | <--(https)-- | phpldapadmin-service      |
+ +-------------------+              +---------------------------+
+  ```
+
 ## *openldap* und *phpLDAPadmin* Container Installation & Konfiguration
 
 ### Volumes erstellen
@@ -13,7 +21,7 @@ Eine Übersicht der erstellen Volumes erhält man mit dem Command:
 
     > docker volume list
 
-### openldap Container erstellen
+### OpenLDAP Container erstellen
 Der OpenLDAP Container basiert auf einem Docker-Image von [@osixia](https://github.com/osixia).
 
     > docker run -p 389:389 --name ldap-service \
