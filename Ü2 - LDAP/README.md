@@ -4,14 +4,17 @@ In dieser Übung wird ein OpenLDAP Container *ldap-service* erstellt. Mit dem we
 ## *openldap* und *phpLDAPadmin* Container Installation & Konfiguration
 
 ### Volumes erstellen
-
-Um die Daten *openldap* Daten persistent auf dem Docker-Host zu speichern, werden die foglenden zwei Volumes erstellt.
+Um die *OpenLDAP* Daten persistent auf dem Docker-Host zu speichern, werden die foglenden zwei Volumes erstellt.
 
     > docker volume create ldap_database
     > docker volume create ldap_config
 
+Eine Übersicht der erstellen Volumes erhält man mit dem Command:
+
+    > docker volume list
+
 ### openldap Container erstellen
-Der OpenLDAP Container basiert auf einem Docker-Image von osixia.
+Der OpenLDAP Container basiert auf einem Docker-Image von [@osixia](https://github.com/osixia).
 
     > docker run -p 389:389 --name ldap-service \
     --hostname ldap-service --net=teko-net --ip=172.20.0.10 \
