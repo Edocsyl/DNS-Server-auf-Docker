@@ -13,35 +13,20 @@ Infrasturkutr (Docker Container):
 
 Ablauf des Aufbaus der Testumgebung: 
 1. Image erstellen
-2. Netzwerk erstellen
-3. DNS-Server Container erstellen & DNS Server starten
-4. 2x Host erstellen & *nslookup* Abfragen stellen
+2. DNS-Server Container erstellen & DNS Server starten
+3. 2x Host erstellen & *nslookup* Abfragen stellen
 
-> Wichtig: Das Projekt ist möglicherweise nicht vollständig Dokumentiert
+> Wichtig: Das Netzwerk *teko-net* wird vorausgesetzt.
 
 Inspiriert durch @foo0x29a
 
-## Docker Image & Netzwerk
+## Docker Image
 
 Zur Vorbereitung wird das Image *dns_teko_image* ab dem Dockerfile erstellt. Diese beinhaltet den DNS Deamon *bind9* und *dnsutils* um DNS Abfragen zu erstellen. Weiter benötigen wir ein Netzwerk *teko-net* in welchem die Infrasturkur operiert.
 
 ### Docker Image "dns_teko_image" ab Dockerfile erstellen
 
     > docker build -t dns_teko_image .
-
-### Netzwerk Erstellen
-
-    > docker network create teko-net --subnet 172.20.0.0/24
-
-### Zusätzliche Commands
-
-#### Netzwerk löschen
-
-    > docker network remove teko-net
-
-#### Netzwerke auflisten
-
-    > docker network list
 
 ## Container
 
