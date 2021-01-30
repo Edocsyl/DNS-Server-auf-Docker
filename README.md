@@ -19,7 +19,7 @@ Die Übungen werden im Docker Netzwerk *teko-net* betrieben. Dieses Netzwerk wir
 
     > docker network list
 
-### Netzwerk vollständig anzeigen
+#### Netzwerk vollständig anzeigen
     > docker network inspect teko-net
 
 
