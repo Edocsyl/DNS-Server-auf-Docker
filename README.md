@@ -1,7 +1,7 @@
 # Teko Informationssysteme
 In diesem Repository werden die Übungen, welche im Fach "Informationssysteme" bearbeitet werden, dokumentiert. 
 
-> Info: Die Übungen sind möglicherweise nicht vollständig dokumentiert oder enthalten Fehler. Durch ein "Pull Request" kannst du Ergänzungen am Projekt vornehmen. 
+> Die Übungen sind möglicherweise nicht vollständig dokumentiert oder enthalten Fehler. Durch ein "Pull Request" kannst du Ergänzungen am Projekt vornehmen. 
 
 ## *teko-net* Netzwerk
 Die Übungen werden im Docker Netzwerk *teko-net* betrieben. Dieses Netzwerk wird für alle Übungen vorausgesetzt. 
@@ -28,3 +28,6 @@ In dieser Übung wird eine "DNS Testumgebung" mit dem *bind9* per Docker aufgese
 
 ## Übung 2 - OpenLDAP Server & Administrationskonsole
 In dieser Übung wird ein OpenLDAP Server basieren auf dem Image von [@osixia](https://github.com/osixia) aufgesetzt.
+
+## Übung 3 - Webserver mit Datenbank
+In dieser Übung wird eine Webserver mit Datenbank Umgebung per *docker-compose.yml* aufgesetzt. Auf dem Webserver werden "Beispiel Scripts" aus dem Unterricht aufgerufen. 
