@@ -43,5 +43,6 @@ volumes:
 networks:
   teko-net:
     # Mit der Option 'external' wird ein bereits vorhandenes netzwerk ausgewählt
+    # Falls das Netzwerk 'teko-net' nicht existiert führen sie denn befehl: 'docker network create -d bridge teko-net' aus
     external:
       name: teko-net
