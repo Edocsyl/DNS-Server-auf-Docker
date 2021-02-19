@@ -28,6 +28,11 @@ Die Beispielscripts werden persistent auf den lokalen Host gespeichert und über
 Nach dem erstellen der Ordnerstruktur, werden die Scripts in das WWW Verzeichnis kopiert. 
 
 ### Mit der Application Docker-Compose wird das Projekt *u3_webserver-datenbank* gestartet
+
+Falls das Netzwerk 'teko-net' nicht existiert führen sie denn befehl
+    
+    > docker network create -d bridge teko-net
+
 Die drei Container werden in der *docker-compose.yml* beschrieben
 
     > docker-compose -p u3_webserver-datenbank up
