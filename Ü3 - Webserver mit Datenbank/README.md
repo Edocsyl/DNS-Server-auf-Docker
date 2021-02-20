@@ -18,6 +18,8 @@ Infrasturkutr (Docker Container):
 ## Aufsetzen der Infrastruktur
 Compose ist ein Werkzeug zur Definition und Ausführung von Multi-Container-Docker-Anwendungen. 
 
+> Hinweis: Falls das Netzwerk 'teko-net' nicht existiert, bitte das Kapitel [Netzwerk erstellen](repo/blob/master/README.md#netzwerk-erstellen) beachten.
+
 ### Ordnerstruktur erstellen
 Die Beispielscripts werden persistent auf den lokalen Host gespeichert und über ein Volume in den Container gemappt. Im Verzeichnis *C:\Temp\root\www* sind diese Scripts abgelegt. Im Ordner *C:\Temp\root\database* liegen die Daten der Datenbank. Diese Ordnerstruktur muss vorgängig erstellt werden. 
 
@@ -28,10 +30,6 @@ Die Beispielscripts werden persistent auf den lokalen Host gespeichert und über
 Nach dem erstellen der Ordnerstruktur, werden die Scripts in das WWW Verzeichnis kopiert. 
 
 ### Mit der Application Docker-Compose wird das Projekt *u3_webserver-datenbank* gestartet
-
-Falls das Netzwerk 'teko-net' nicht existiert, bitte das Kapitel [Netzwerk erstellen](repo/blob/master/README.md#netzwerk-erstellen) beachten.
-    
-    > docker network create -d bridge teko-net
 
 Die drei Container werden in der *docker-compose.yml* beschrieben
 
