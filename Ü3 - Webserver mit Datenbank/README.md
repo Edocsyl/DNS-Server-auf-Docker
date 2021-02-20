@@ -29,7 +29,7 @@ Nach dem erstellen der Ordnerstruktur, werden die Scripts in das WWW Verzeichnis
 
 ### Mit der Application Docker-Compose wird das Projekt *u3_webserver-datenbank* gestartet
 
-Falls das Netzwerk 'teko-net' nicht existiert führen sie denn befehl
+Falls das Netzwerk 'teko-net' nicht existiert, bitte das Kapitel [Netzwerk erstellen](repo/blob/master/README.md#netzwerk-erstellen) beachten.
     
     > docker network create -d bridge teko-net
 
